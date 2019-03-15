@@ -1,0 +1,11 @@
+<div [class.locked]="win==true">
+<div id="grid1"> 
+      <div class="base" *ngFor="let items of  column" (click)="SetPlayer(this.items)" ></div>
+  </div>
+</div><br>
+<div id="grid" >
+  <div *ngFor="let item of element" class="square"  [class.player1]="item=='set'" [class.player2]="item=='set1'" [class.win]="item=='win'"></div>
+</div>
+<h4>{{name}}</h4>
+<h1 *ngIf="win"> win</h1>
+<router-outlet></router-outlet>
